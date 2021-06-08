@@ -1,4 +1,3 @@
-# drivescript_specification
 # The DriveScript 0.2 specification
 
 This document is intended as a reference and a showcase of the DriveScript language.
@@ -70,7 +69,7 @@ They are mostly used within conditional expresions which are used in loops & for
 ```
 {
     int a = 5;
-    DRIVE TILL [a == 10]
+    DRIVE TILL (a == 10)
     {
         a = a + 1
         print(a)
@@ -85,12 +84,12 @@ They are mostly used within conditional expresions which are used in loops & for
     <td>
 
 ```
-{
-    int a = 5;
-    DRIVE TILL [a == 10]
-    {
-        a = a + 1
-        print(a)
+{ 
+    IF (b == 4) {
+          int a = 7;
+          print(a);
+    } ELSE {
+          print(b);
     }
 }
 ```
@@ -103,12 +102,11 @@ They are mostly used within conditional expresions which are used in loops & for
     <td>
 
 ```
-{
-    int a = 5;
-    DRIVE TILL [a == 10]
-    {
-        a = a + 1
-        print(a)
+{ 
+    IF (b > c) {
+          print("Var b is larger than var c");
+    } ELSE {
+          print("Var c is larger than var b");
     }
 }
 ```
@@ -122,10 +120,10 @@ They are mostly used within conditional expresions which are used in loops & for
 
 ```
 {
-    int a = 5;
-    DRIVE TILL [a == 10]
+    int b = 5;
+    DRIVE TILL (b >= 200)
     {
-        a = a + 1
+        a = a + 10
         print(a)
     }
 }
@@ -140,11 +138,10 @@ They are mostly used within conditional expresions which are used in loops & for
 
 ```
 {
-    int a = 5;
-    DRIVE TILL [a == 10]
+    int b = 200;
+    DRIVE TILL (b < 200)
     {
-        a = a + 1
-        print(a)
+        b = b - 5
     }
 }
 ```
@@ -157,14 +154,16 @@ They are mostly used within conditional expresions which are used in loops & for
     <td>
 
 ```
-{
-    int a = 5;
-    DRIVE TILL [a == 10]
-    {
-        a = a + 1
-        print(a)
+{ 
+    Float d = 3.2
+    Float e = 5.7
+    IF (e > d) {
+          print("var E is larger than var D);
+    } ELSE {
+         print("var D is larger than var E);
     }
 }
+
 ```
 </td>    
 </tr>
@@ -230,3 +229,4 @@ I've also implemented a postfix to control the speed of the car.
 LeftEngine stop //Can be used to stop one of the engines.
 FULL STOP works //like a emergency stop and end the program, similair to System.exit() in JAVA.
 ```
+
