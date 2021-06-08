@@ -230,9 +230,3 @@ I've also implemented a postfix to control the speed of the car.
 LeftEngine stop //Can be used to stop one of the engines.
 FULL STOP works //like a emergency stop and end the program, similair to System.exit() in JAVA.
 ```
-
-<style>
-.comparator table {
-    width:600%;
-}
-</style>
